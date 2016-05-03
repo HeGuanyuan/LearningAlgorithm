@@ -153,4 +153,24 @@ public abstract class StringUtils {
 
     }
 
+    /**
+     * 校验用户名是否合法，仅允许数字字母汉字下划线
+     *
+     * @param name String
+     * @return 是否合法 boolean
+     */
+    public static boolean vaildUserName(String name) {
+        return name.matches("[_0-9a-zA-Z\\u4e00-\\u9fa5]{2,10}");
+    }
+
+    /**
+     * 校验密码是否合法，仅允许数字字母下划线
+     *
+     * @param passwd String
+     * @return 是否合法 boolean
+     */
+    public static boolean validPasswd(String passwd) {
+        return passwd.matches("[0-9a-zA-Z_]{4,15}");
+    }
+
 }
